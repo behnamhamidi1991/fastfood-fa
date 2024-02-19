@@ -8,26 +8,27 @@ $post-dark: #0f2d45;
 $post-light: #f8f8f8;
 $text-dark: #080f14;
 $text-light: #fff;
-$primary: #004e9a;
-$secondary: #428cd4;
-$pink: #ea4492;
+$primary-dark: #3258e0;
+$primary-light: #3298f1;
+$secondary: #ea4492;
+$green: rgb(10, 147, 152);
 
 :root {
   --bg-color: #{$bg-light};
   --text-color: #{$text-dark};
   --post-color: #{$post-light};
-  --primary-color: #{$primary};
+  --primary-color: #{$primary-dark};
   --secondary-color: #{$secondary};
-  --pink-color: #{$pink};
+  --green-color: #{$green};
 }
 
 .dark {
   --bg-color: #{$bg-dark};
   --text-color: #{$text-light};
   --post-color: #{$post-dark};
-  --primary-color: #{$primary};
+  --primary-color: #{$primary-light};
   --secondary-color: #{$secondary};
-  --pink-color: #{$pink};
+  --green-color: #{$green};
 }
 
 @font-face {
@@ -50,14 +51,18 @@ $pink: #ea4492;
   font-family: "title";
   font-weight: 900;
   font-size: 50px;
+  color: var(--primary-color);
 }
 
 .main p {
   font-family: "title";
   font-size: 17px;
+  background-color: var(--secondary-color);
+  color: #fff;
 }
 
-.post {
-  background-color: var(--post-color);
+.post p {
   padding: 20px;
+  background-color: var(--green-color);
+  color: #fff;
 }
