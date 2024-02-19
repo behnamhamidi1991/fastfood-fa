@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$bg-dark: #0f1d29;
+$bg-light: #fff;
+$post-dark: #0f2d45;
+$post-light: #f8f8f8;
+$text-dark: #080f14;
+$text-light: #fff;
+$primary: #004e9a;
+$secondary: #428cd4;
+$pink: #ea4492;
+
+:root {
+  --bg-color: #{$bg-light};
+  --text-color: #{$text-dark};
+  --post-color: #{$post-light};
+  --primary-color: #{$primary};
+  --secondary-color: #{$secondary};
+  --pink-color: #{$pink};
+}
+
+.dark {
+  --bg-color: #{$bg-dark};
+  --text-color: #{$text-light};
+  --post-color: #{$post-dark};
+  --primary-color: #{$primary};
+  --secondary-color: #{$secondary};
+  --pink-color: #{$pink};
+}
+
+@font-face {
+  font-family: "text";
+  src: url("../assets/fonts/vazir.ttf");
+}
+@font-face {
+  font-family: "title";
+  src: url("../assets/fonts/yekan.ttf");
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.main h1 {
+  font-family: "title";
+  font-weight: 900;
+  font-size: 50px;
+}
+
+.main p {
+  font-family: "title";
+  font-size: 17px;
+}
+
+.post {
+  background-color: var(--post-color);
+  padding: 20px;
+}
