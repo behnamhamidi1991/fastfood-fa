@@ -199,3 +199,102 @@ export const iranian = [
     soldout: false,
   },
 ];
+
+import story1 from './assets/images/foodstory/story1.jpg';
+import story2 from './assets/images/foodstory/story2.jpg';
+import story3 from './assets/images/foodstory/story3.jpg';
+import story4 from './assets/images/foodstory/story4.jpg';
+import story5 from './assets/images/foodstory/story5.jpg';
+import story6 from './assets/images/foodstory/story6.jpg';
+import story7 from './assets/images/foodstory/story7.jpg';
+import story8 from './assets/images/foodstory/story8.jpg';
+
+import person1 from './assets/images/profile/person1.png';
+import person2 from './assets/images/profile/person2.png';
+import person3 from './assets/images/profile/person3.png';
+import person4 from './assets/images/profile/person4.png';
+import person5 from './assets/images/profile/person5.png';
+import person6 from './assets/images/profile/person6.png';
+
+export const foodstory = [
+  {
+    id: 1,
+    img: story1,
+    title: 'پیراشکی لذیذ',
+    description: 'طعم لذیذ پیراشکی های مارو امتحان کنید',
+    restaurant: 'شیرینی پاسارگاد',
+    price: '48.000',
+    profile: person1,
+    live: true,
+  },
+  {
+    id: 2,
+    img: story2,
+    title: 'باقلوا تبریز',
+    description: 'طعم باقلوا با چای تازه خیلی میچسبه',
+    restaurant: 'شیرینی آلا',
+    price: '94.000',
+    profile: person2,
+    live: true,
+  },
+  {
+    id: 3,
+    img: story3,
+    title: 'پاستا پنه آلفردو',
+    description: 'پاستا پنه با سس مخصوص و نوشابه کوکا چه ترکیبی بشه',
+    restaurant: 'کافه رستوران سالیاری',
+    price: '186.000',
+    profile: person3,
+    live: true,
+  },
+  {
+    id: 4,
+    img: story4,
+    title: 'پیتزا ایتالیایی',
+    description: 'طعم پیتزای خوشمزه به همراه سس چهارفصل و نوشابه کوکا',
+    restaurant: 'کافه رستوران خوش طعم',
+    price: '141.000',
+    profile: person4,
+    live: false,
+  },
+  {
+    id: 5,
+    img: story5,
+    title: 'پاستا ترکیبی',
+    description: 'پاستا ترکیبی با سس مخصوص، سوسیس کوکتل و سبزیجات',
+    restaurant: 'کافه رستوران پاییز',
+    price: '108.000',
+    profile: person5,
+    live: false,
+  },
+  {
+    id: 6,
+    img: story6,
+    title: 'پای آمریکایی',
+    description: 'این پای با یک قهوه یا چای داغ خیلی میچسبه حتماً امتحان کنید',
+    restaurant: 'کافه مریم',
+    price: '55.000',
+    profile: person6,
+    live: true,
+  },
+  {
+    id: 7,
+    img: story7,
+    title: 'جوجه گریل شده مکزیکی',
+    description: 'اگر به طعم تند علاقه دارید این جوجه رو حتماً امتحان کنید',
+    restaurant: 'رستوران سالامی',
+    price: '126.000',
+    profile: person3,
+    live: false,
+  },
+  {
+    id: 8,
+    img: story8,
+    title: 'استیک گریل شده',
+    description: 'ترکیب استیک با سبزیجات و ادویه مخصوص فرانسوی',
+    restaurant: 'رستوران آرین',
+    price: '198.250',
+    profile: person2,
+    live: true,
+  },
+];

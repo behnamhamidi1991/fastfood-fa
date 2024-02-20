@@ -1,0 +1,124 @@
+.foodstory-container {
+  padding: 100px 10%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  .page-title {
+    h2 {
+      font-size: 32px;
+      font-weight: 900;
+    }
+
+    p {
+      font-size: 18px;
+      color: var();
+      margin-bottom: 20px;
+    }
+  }
+
+  .slider-container {
+    cursor: pointer;
+    .mySwiper {
+      padding-top: 30px;
+      padding-bottom: 60px;
+
+      .slide {
+        width: 100%;
+        position: relative;
+        border-radius: 18px;
+
+        .profile {
+          position: absolute;
+          z-index: 1000;
+          right: 20px;
+          top: 20px;
+
+          .profile-image {
+            width: 70px;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            background: linear-gradient(orange, red) padding-box,
+              linear-gradient(to right, orange, red) border-box;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+            transition: all ease-in-out 0.2s;
+            &:hover {
+              background: linear-gradient(red, orange) padding-box,
+                linear-gradient(to right, rgb(255, 71, 71), orange) border-box;
+            }
+          }
+
+          .live {
+            position: absolute;
+            bottom: -7px;
+            right: 15px;
+            background-color: red;
+            font-size: 11px;
+            padding: 1px 6px;
+            color: #fff;
+            font-weight: 900;
+            font-family: 'Poppins';
+            letter-spacing: 1px;
+            border-radius: 8px;
+          }
+          .liveOff {
+            display: none;
+          }
+        }
+
+        .imgContainer {
+          background-color: black;
+          border-radius: 18px;
+          .slide-image {
+            opacity: 0.5;
+            border-radius: 18px;
+          }
+        }
+      }
+      .slide-content {
+        position: absolute;
+        bottom: 26px;
+        right: 12px;
+        padding: 0 15px;
+
+        .slide-title {
+          font-size: 22px;
+          font-weight: 900;
+          color: #fff;
+          border-bottom: 1px solid var(--secondary-color);
+          width: fit-content;
+          margin-bottom: 10px;
+          padding: 5px 0;
+        }
+        .slide-desc {
+          color: #fff;
+          font-size: 13px;
+          text-align: justify;
+          margin-bottom: 12px;
+        }
+        .slide-details {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          .restaurant {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 20px;
+          }
+          .price {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
