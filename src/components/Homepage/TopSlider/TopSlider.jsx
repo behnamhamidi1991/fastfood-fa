@@ -3,7 +3,7 @@ import './topslider.scss';
 import { food } from '../../../foodData';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Pagination } from 'swiper/modules';
+import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -13,6 +13,8 @@ import 'swiper/css/pagination';
 import { IoIosPricetag } from 'react-icons/io';
 import { IoRestaurant } from 'react-icons/io5';
 import { MdCategory } from 'react-icons/md';
+import AddToCart from '../../shared/AddToCart/AddToCart';
+import ReadMore from '../../shared/ReadMore/ReadMore';
 
 const TopSlider = () => {
   return (
@@ -28,7 +30,11 @@ const TopSlider = () => {
         pagination={{
           clickable: true,
         }}
-        modules={[FreeMode, Pagination]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay, FreeMode, Pagination]}
         className="topslider-swiper"
       >
         {food.map((item) => (
@@ -51,6 +57,10 @@ const TopSlider = () => {
               <p className="topslider-restaurant">
                 <IoRestaurant /> رستوران: {item.restaurant}
               </p>
+              <div className="topslider-btn-container">
+                <AddToCart>اضافه کردن به سبد خرید</AddToCart>
+                <ReadMore>مشاهده محصول</ReadMore>
+              </div>
             </div>
           </SwiperSlide>
         ))}

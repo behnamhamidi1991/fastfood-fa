@@ -77,6 +77,11 @@
         width: fit-content;
         border-radius: 3px;
       }
+      .topslider-btn-container {
+        display: flex;
+        gap: 4px;
+        padding: 10px 0 20px 0;
+      }
     }
   }
 }
