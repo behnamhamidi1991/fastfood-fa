@@ -25,10 +25,28 @@ const TopSlider = () => {
       </div>
       <Swiper
         slidesPerView={4}
-        spaceBetween={30}
+        spaceBetween={12}
         freeMode={true}
         pagination={{
           clickable: true,
+        }}
+        breakpoints={{
+          99: {
+            slidesPerView: 1,
+            spaceBetween: 12,
+          },
+          802: {
+            slidesPerView: 2,
+            spaceBetween: 12,
+          },
+          1194: {
+            slidesPerView: 3,
+            spaceBetween: 12,
+          },
+          1596: {
+            slidesPerView: 4,
+            spaceBetween: 12,
+          },
         }}
         autoplay={{
           delay: 2500,
