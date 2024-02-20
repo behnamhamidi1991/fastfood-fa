@@ -25,12 +25,17 @@
         margin-bottom: 10px;
       }
       .top-section-left-header-subtitle-1 {
-        font-size: 18px;
+        font-size: 16px;
         margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
       }
       .top-section-left-header-subtitle-2 {
         font-size: 13px;
+        margin-top: 10px;
         margin-bottom: 40px;
+        text-align: justify;
       }
     }
 
@@ -54,7 +59,8 @@
         transition: all ease-in-out 0.1s;
         cursor: pointer;
         p {
-          font-size: 18px;
+          font-size: 13px;
+          font-weight: 900;
         }
         &:hover {
           transform: scale(1.02);
