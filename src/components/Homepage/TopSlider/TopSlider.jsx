@@ -10,6 +10,10 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
+import { IoIosPricetag } from 'react-icons/io';
+import { IoRestaurant } from 'react-icons/io5';
+import { MdCategory } from 'react-icons/md';
+
 const TopSlider = () => {
   return (
     <div className="topslider-page">
@@ -35,6 +39,18 @@ const TopSlider = () => {
             <div className="topslider-content">
               <h3>{item.title}</h3>
               <p>{item.description.substring(0, 198)} ...</p>
+            </div>
+            <div className="topslider-info">
+              <p className="topslider-category">
+                <MdCategory /> دسته بندی: {item.category}
+              </p>
+              <p className="topslider-price">
+                {' '}
+                <IoIosPricetag /> قیمت: {item.price}
+              </p>
+              <p className="topslider-restaurant">
+                <IoRestaurant /> رستوران: {item.restaurant}
+              </p>
             </div>
           </SwiperSlide>
         ))}
