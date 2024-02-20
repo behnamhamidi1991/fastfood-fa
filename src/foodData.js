@@ -111,3 +111,79 @@ export const food = [
     img: hotdog,
   },
 ];
+
+import iranian1 from './assets/images/iranian/1.jpg';
+import iranian2 from './assets/images/iranian/2.jpg';
+import iranian3 from './assets/images/iranian/3.jpg';
+import iranian4 from './assets/images/iranian/4.jpg';
+import iranian5 from './assets/images/iranian/5.jpg';
+import iranian6 from './assets/images/iranian/6.jpg';
+import iranian7 from './assets/images/iranian/7.jpg';
+import iranian8 from './assets/images/iranian/8.jpg';
+import iranian9 from './assets/images/iranian/9.jpg';
+import iranian10 from './assets/images/iranian/10.jpg';
+import iranian11 from './assets/images/iranian/11.jpg';
+import iranian12 from './assets/images/iranian/12.jpg';
+
+export const iranian = [
+  {
+    id: 1,
+    img: iranian1,
+    price: '98.900',
+  },
+  {
+    id: 2,
+    img: iranian2,
+    price: '86.100',
+  },
+  {
+    id: 3,
+    img: iranian3,
+    price: '119.000',
+  },
+  {
+    id: 4,
+    img: iranian4,
+    price: '99.000',
+  },
+  {
+    id: 5,
+    img: iranian5,
+    price: '85.500',
+  },
+  {
+    id: 6,
+    img: iranian6,
+    price: '69.900',
+  },
+  {
+    id: 7,
+    img: iranian7,
+    price: '52.300',
+  },
+  {
+    id: 8,
+    img: iranian8,
+    price: '89.900',
+  },
+  {
+    id: 9,
+    img: iranian9,
+    price: '110.000',
+  },
+  {
+    id: 10,
+    img: iranian10,
+    price: '142.000',
+  },
+  {
+    id: 11,
+    img: iranian11,
+    price: '75.000',
+  },
+  {
+    id: 12,
+    img: iranian12,
+    price: '66.200',
+  },
+];
