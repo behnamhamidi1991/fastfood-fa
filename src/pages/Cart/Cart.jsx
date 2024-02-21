@@ -9,10 +9,22 @@ import {
   decrementQuantity,
 } from '../../features/cartSlice/cartSlice';
 
-import { food } from '../../foodData';
-
 const ShoppingCart = () => {
   const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
+  const handleRemoveItem = (id) => {
+    dispatch(removeItemFromCart(id));
+  };
+
+  const handleIncrement = (id) => {
+    dispatch(incrementQuantity(id));
+  };
+
+  const handleDecrement = (id) => {
+    dispatch(decrementQuantity(id));
+  };
+
   return (
     <div className="cart-page">
       <div className="cart-header">
@@ -36,22 +48,43 @@ const ShoppingCart = () => {
             <div className="cart-right">
               <div className="cart-item-info">
                 <h3>{item.title}</h3>
-                <p className="cart-item-price">{item.price}</p>
-                <p className="cart-item-restaurant">{item.restaurant}</p>
+                <p className="cart-item-price">قیمت: {item.price}</p>
+                <p className="cart-item-restaurant">
+                  رستوران: {item.restaurant}
+                </p>
               </div>
+
               <div className="cart-quantity">
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
+                <button
+                  className="quantity-btn"
+                  onClick={() => handleDecrement(item.id)}
+                >
+                  -
+                </button>
+                <span>{item.quantity}</span>
+                <button
+                  className="quantity-btn"
+                  onClick={() => handleIncrement(item.id)}
+                >
+                  +
+                </button>
+                <button
+                  className="cart-remove-btn"
+                  onClick={() => handleRemoveItem(item.id)}
+                >
+                  حذف آیتم
+                </button>
               </div>
             </div>
           </div>
         ))}
 
-        <div className="continue-buttons">
-          <button className="continuePay">ادامه و پرداخت</button>
-          <button className="continueShop">ادامه خرید</button>
-        </div>
+        {cart.length !== 0 ? (
+          <div className="continue-buttons">
+            <button className="continuePay">ادامه و پرداخت</button>
+            <button className="continueShop">ادامه خرید</button>
+          </div>
+        ) : null}
       </div>
     </div>
   );

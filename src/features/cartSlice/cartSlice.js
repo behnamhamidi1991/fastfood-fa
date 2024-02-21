@@ -38,6 +38,17 @@ const cartSlice = createSlice({
   },
 });
 
+// Get Total Price
+export const selectTotal = (state) => {
+  if (Array.isArray(state)) {
+    return state
+      .reduceRight((total, item) => total + item.price * item.quantity, 0)
+      .toFixed(2);
+  } else {
+    console.log('Your item is not an array!');
+  }
+};
+
 export const {
   addItemToCart,
   removeItemFromCart,
