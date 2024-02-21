@@ -37,7 +37,7 @@ const ShoppingCart = () => {
         ) : (
           <p>{cart.length} آیتم در سبد خرید شما موجود می باشد</p>
         )}
-        <p>مبلغ قابل پرداخت: {total} تومان</p>
+        <p style={{ fontWeight: 'bolder' }}>مبلغ قابل پرداخت: {total} تومان</p>
       </div>
 
       <div className="cart-container">
@@ -88,6 +88,9 @@ const ShoppingCart = () => {
           </div>
         ) : null}
       </div>
+      {cart.length === 0 ? (
+        <div className="cart-page-bottom-padding"></div>
+      ) : null}
     </div>
   );
 };
