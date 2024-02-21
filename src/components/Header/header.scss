@@ -24,6 +24,7 @@ header {
     display: none;
     border: none;
     background-color: transparent;
+    cursor: pointer;
   }
 
   //   HEADER LOGO
@@ -149,7 +150,7 @@ header {
 }
 
 @media screen and (max-width: 1116px) {
-  .header {
+  header {
     .header-links {
       ul {
         gap: 30px;
@@ -159,7 +160,7 @@ header {
 }
 
 @media screen and (max-width: 1016px) {
-  .header {
+  header {
     .hamburger-menu-icon {
       display: flex;
     }
@@ -185,7 +186,7 @@ header {
 }
 
 @media screen and (max-width: 814px) {
-  .header {
+  header {
     .header-logo {
       display: none;
     }

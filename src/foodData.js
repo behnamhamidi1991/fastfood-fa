@@ -13,7 +13,7 @@ export const food = [
   {
     id: '1',
     title: 'پیتزا ایتالیایی',
-    price: '189000',
+    price: 189000,
     restaurant: 'پیتزا مارگاریتا',
     category: 'فست فود، ایتالیایی',
     description:
@@ -23,7 +23,7 @@ export const food = [
   {
     id: '2',
     title: 'پیتزا آمریکایی',
-    price: '140000',
+    price: 140000,
     restaurant: 'پیتزا فست فود مهران',
     category: 'فست فود، آمریکایی',
     description:
@@ -33,7 +33,7 @@ export const food = [
   {
     id: '3',
     title: 'پاستا پنه آلفردو',
-    price: '241000',
+    price: 241000,
     restaurant: 'فست فود تاینی',
     category: 'فست فود، ایتالیایی',
     description:
@@ -43,7 +43,7 @@ export const food = [
   {
     id: '4',
     title: 'برگر مخصوص',
-    price: '152000',
+    price: 152000,
     restaurant: 'میت برگر',
     category: 'فست فود، ساندویچ',
     description:
@@ -53,7 +53,7 @@ export const food = [
   {
     id: '5',
     title: 'ساندویچ سرد',
-    price: '89000',
+    price: 89000,
     restaurant: 'هانی برگر',
     category: 'فست فود، ساندویچ',
     description:
@@ -63,7 +63,7 @@ export const food = [
   {
     id: '6',
     title: 'چیزبرگر مخصوص',
-    price: '189000',
+    price: 189000,
     restaurant: 'میت برگر',
     category: 'فست فود، ساندویچ',
     description:
@@ -73,7 +73,7 @@ export const food = [
   {
     id: '7',
     title: 'ساندویچ مخلوط',
-    price: '16000',
+    price: 16000,
     restaurant: 'فست فود تاینی',
     category: 'فست فود، ساندویچ',
     description:
@@ -83,7 +83,7 @@ export const food = [
   {
     id: '8',
     title: 'استیک گریل',
-    price: '345000',
+    price: 345000,
     restaurant: 'گریل لند',
     category: 'فست فود، استیک',
     description:
@@ -93,7 +93,7 @@ export const food = [
   {
     id: '9',
     title: 'سیب فرانسوی',
-    price: '74000',
+    price: 74000,
     restaurant: 'فست فود تاینی',
     category: 'فست فود، سخاری',
     description:
@@ -103,7 +103,7 @@ export const food = [
   {
     id: '10',
     title: 'هات داگ',
-    price: '112000',
+    price: 112000,
     restaurant: 'هانی برگر',
     category: 'فست فود، ساندویچ',
     description:
