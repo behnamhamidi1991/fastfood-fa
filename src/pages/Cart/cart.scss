@@ -1,9 +1,13 @@
 .cart-page {
   padding: 100px 10%;
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 
   .cart-header {
     margin-bottom: 30px;
     text-align: center;
+    line-height: 1.8;
     h2 {
       font-family: 'title';
       font-size: 32px;
@@ -12,6 +16,10 @@
     p {
       font-size: 18px;
       font-family: 'fanum';
+      margin-bottom: 10px;
+    }
+    .cart-page-icon {
+      font-size: 50px;
     }
   }
 
@@ -38,15 +46,20 @@
       }
       .cart-right {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         h3 {
           font-family: 'title';
           font-size: 23px;
+          margin-bottom: 10px;
         }
 
         .cart-item-info {
           font-family: 'fanum';
           .cart-item-price {
+            margin-bottom: 10px;
             font-family: 'fanum';
           }
           .cart-item-restaurant {
@@ -61,9 +74,80 @@
             border: none;
             background-color: var(--primary-color);
             color: #fff;
+            cursor: pointer;
           }
           span {
             margin: 0 10px;
+          }
+        }
+      }
+    }
+    .continue-buttons {
+      display: flex;
+      gap: 10px;
+      .continuePay {
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-weight: 900;
+        background-color: var(--primary-color);
+        color: #fff;
+        cursor: pointer;
+      }
+      .continueShop {
+        padding: 5px 10px;
+        color: #fff;
+        cursor: pointer;
+        background-color: var(--secondary-color);
+        border-radius: 4px;
+        font-weight: 900;
+        border: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1438px) {
+  .cart-page {
+    .cart-container {
+      width: 100%;
+      padding: 0 10%;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .cart-page {
+    padding: 100px 5%;
+    .cart-container {
+      width: 100%;
+      padding: 0 1%;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .cart-page {
+    padding: 100px 8%;
+    .cart-container {
+      width: 100%;
+      .cart-box {
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        background-color: var(--post-color);
+        margin-bottom: 25px;
+        padding: 15px;
+        box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.1);
+        .cart-left {
+          img {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            border-radius: 50%;
+            top: -15px;
+            left: -20px;
           }
         }
       }

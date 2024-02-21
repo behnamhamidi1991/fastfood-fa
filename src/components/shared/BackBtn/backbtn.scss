@@ -1,0 +1,14 @@
+.back-to-homepage-btn {
+  background-color: var(--primary-color);
+  padding: 7px 12px;
+  color: #fff;
+  border-radius: 4px;
+  font-family: 'title';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  p {
+    font-family: 'title';
+  }
+}

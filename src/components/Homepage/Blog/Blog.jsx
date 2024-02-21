@@ -2,6 +2,7 @@ import React from 'react';
 import './blog.scss';
 import { blogPost } from '../../../data';
 import ReadMore from '../../shared/ReadMore/ReadMore';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
   return (
@@ -39,9 +40,9 @@ const Blog = () => {
               <div className="content">
                 <p>{post.content.substring(0, 270)} ...</p>
               </div>
-              <div className="button">
+              <Link to={`/blog/${post.id}`} className="button">
                 <ReadMore>بیشتر بخوانید</ReadMore>
-              </div>
+              </Link>
             </div>
           </div>
         ))}

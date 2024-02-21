@@ -55,7 +55,7 @@ const TopSlider = () => {
           },
         }}
         autoplay={{
-          delay: 2500,
+          delay: 3500,
           disableOnInteraction: false,
         }}
         modules={[Autoplay, FreeMode, Pagination]}
@@ -85,7 +85,7 @@ const TopSlider = () => {
                 <div onClick={() => handleAddTocart(item)}>
                   <AddToCart>اضافه کردن به سبد خرید</AddToCart>
                 </div>
-                <Link to="/">
+                <Link to={`/production/${item.id}`}>
                   <ReadMore>مشاهده محصول</ReadMore>
                 </Link>
               </div>

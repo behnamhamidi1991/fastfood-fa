@@ -7,7 +7,7 @@ import blogBurger from './assets/images/blog/burger.jpg';
 
 export const blogPost = [
   {
-    id: 1,
+    id: '1',
     title: 'رستوران مدرن',
     author: 'آرش کرمانی',
     content:
@@ -16,7 +16,7 @@ export const blogPost = [
     blogImg: restaurant,
   },
   {
-    id: 2,
+    id: '2',
     title: 'دوره های آشپزی حرفه ای',
     author: 'یاسمن ناصری',
     content:
@@ -25,7 +25,7 @@ export const blogPost = [
     blogImg: chef,
   },
   {
-    id: 3,
+    id: '3',
     title: 'بالا بردن کیفیت قهوه',
     author: 'نازنین احمدی',
     content:
@@ -34,7 +34,7 @@ export const blogPost = [
     blogImg: coffee,
   },
   {
-    id: 4,
+    id: '4',
     title: 'سریع ترین زمان ممکن',
     author: 'پیام زمانی',
     content:
@@ -43,7 +43,7 @@ export const blogPost = [
     blogImg: delivery,
   },
   {
-    id: 5,
+    id: '5',
     title: 'آشپزخانه استاندارد',
     author: 'احمد جمشیدی',
     content:
@@ -52,7 +52,7 @@ export const blogPost = [
     blogImg: kitchen,
   },
   {
-    id: 6,
+    id: '6',
     title: 'ساندویچ با کیفیت',
     author: 'ادمین',
     content:
@@ -61,7 +61,7 @@ export const blogPost = [
     blogImg: blogBurger,
   },
   {
-    id: 7,
+    id: '7',
     title: 'آموزش آشپزی مقدماتی',
     author: 'ادمین',
     content:
@@ -70,7 +70,7 @@ export const blogPost = [
     blogImg: chef,
   },
   {
-    id: 8,
+    id: '8',
     title: 'قهوه با کیفیت در منزل',
     author: 'ادمین',
     content:
