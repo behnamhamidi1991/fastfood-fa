@@ -1,0 +1,91 @@
+.blog-container {
+  padding: 50px 10%;
+  background-color: var(--bg-color);
+  color: vaR(--text-color);
+
+  .blog-header {
+    h2 {
+      font-size: 32px;
+
+      font-weight: 900;
+    }
+
+    p {
+      font-size: 18px;
+      color: var();
+      margin-bottom: 20px;
+    }
+  }
+
+  .post-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, auto));
+    grid-gap: 18px;
+    justify-content: center;
+    .post-box {
+      background-color: var(--post-color);
+      .img-container {
+        .post-image {
+          width: 100%;
+          &:hover {
+            filter: brightness(90%) hue-rotate(45deg);
+          }
+        }
+      }
+      .blog-content {
+        padding: 28px;
+        box-shadow: 3px 3px 7px 2px rgba(0, 0, 0, 0.1);
+        .details {
+          .postTitle {
+            font-size: 20px;
+            font-weight: 900;
+          }
+          .author-date {
+            display: flex;
+            margin: 10px 0;
+            gap: 8px;
+            .date {
+              background-color: var(--primary-color);
+              color: #fff;
+              padding: 5px 10px;
+              border-radius: 10px;
+            }
+            .author {
+              background-color: var(--secondary-color);
+              color: #fff;
+              padding: 5px 10px;
+              border-radius: 10px;
+            }
+          }
+        }
+        .content p {
+          font-size: 14px;
+          text-align: justify;
+        }
+
+        .button {
+          margin-top: 20px;
+          background-color: var(--primary-color);
+          color: #fff;
+          width: fit-content;
+          padding: 8px 15px;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: all ease-in-out 0.1s;
+          &:hover {
+            background-color: var(--light);
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 398px) {
+  .blog-container {
+    padding: 100px 4%;
+    background-color: var(--light);
+  }
+}

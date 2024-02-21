@@ -1,7 +1,7 @@
 import React from 'react';
 import './foodstory.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Pagination } from 'swiper/modules';
+import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
 import { foodstory } from '../../../foodData';
 import './foodstory.scss';
 
@@ -43,7 +43,11 @@ const FoodStory = () => {
               spaceBetween: 18,
             },
           }}
-          modules={[Pagination]}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay, Pagination]}
           className="mySwiper"
         >
           {foodstory.map((story) => (
