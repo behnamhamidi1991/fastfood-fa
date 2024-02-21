@@ -39,7 +39,9 @@ const Blog = () => {
               <div className="content">
                 <p>{post.content.substring(0, 270)} ...</p>
               </div>
-              <ReadMore>بیشتر بخوانید</ReadMore>
+              <div className="button">
+                <ReadMore>بیشتر بخوانید</ReadMore>
+              </div>
             </div>
           </div>
         ))}

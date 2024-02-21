@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="right-header">
           <div className="right-header-title">
             <img src={icon} alt="icon" className="icon" />
-            <h2>فست فود و فودکورت سورنا</h2>
+            <h2>فودکورت و کافی شاپ سورن</h2>
           </div>
           <p>
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
