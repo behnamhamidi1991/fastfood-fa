@@ -123,3 +123,19 @@
   height: 100%;
   object-fit: cover;
 }
+
+@media screen and (max-width: 902px) {
+  .foodstory-container {
+    padding: 30px 10%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    .page-title {
+      p {
+        font-size: 13px;
+        line-height: 2.1;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}

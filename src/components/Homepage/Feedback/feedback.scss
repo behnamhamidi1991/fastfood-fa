@@ -50,9 +50,41 @@
   }
 }
 
-@media screen and (max-width: 952px) {
+@media screen and (max-width: 902px) {
   .feedback-container {
-    padding: 100px 4%;
+    padding: 20px 4%;
+    .titleBox {
+      h2 {
+        font-size: 25px;
+        font-weight: 900;
+        font-family: 'title';
+      }
+
+      p {
+        font-size: 17px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .slider-box {
+      .mySwiper {
+        .slide {
+          .content-container {
+            h4 {
+              font-size: 21px;
+              font-weight: 900;
+              margin-bottom: 12px;
+            }
+            p {
+              font-size: 14px;
+              line-height: 1.9;
+              text-align: justify;
+            }
+          }
+        }
+      }
+    }
   }
 }
 

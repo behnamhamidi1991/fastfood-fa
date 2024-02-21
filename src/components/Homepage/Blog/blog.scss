@@ -74,9 +74,21 @@
   }
 }
 
-@media screen and (max-width: 398px) {
+@media screen and (max-width: 902px) {
   .blog-container {
-    padding: 100px 4%;
-    background-color: var(--light);
+    padding: 30px 4%;
+
+    .blog-header {
+      h2 {
+        font-size: 22px;
+        font-weight: 900;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 2.1;
+        margin-bottom: 20px;
+      }
+    }
   }
 }
