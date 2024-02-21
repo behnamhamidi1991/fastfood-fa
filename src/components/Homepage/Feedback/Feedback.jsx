@@ -10,11 +10,6 @@ import { feedback } from '../../../foodData';
 const Feedback = () => {
   return (
     <div className="feedback-container">
-      <div className="titleBox">
-        <h2>نظرات مشتریان ما</h2>
-        <p>نظرات مشتریان ما نشان دهنده کیفیت سرویس های ما می باشد</p>
-      </div>
-
       <div className="slider-box">
         <Swiper
           spaceBetween={30}

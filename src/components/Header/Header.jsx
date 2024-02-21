@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggle } from '../../features/themeSlice/themeSlice';
 import './header.scss';
@@ -13,10 +13,24 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
+  useEffect(() => {
+    window.addEventListener('scroll', isSticky);
+    return () => {
+      window.removeEventListener('scroll', isSticky);
+    };
+  });
+  const isSticky = () => {
+    const header = document.querySelector('header');
+    const scrollTop = window.scrollY;
+    scrollTop >= 300
+      ? header?.classList.add('is-sticky')
+      : header?.classList.remove('is-sticky');
+  };
+
   const theme = useSelector((state) => state.theme.dark);
   const dispatch = useDispatch();
   return (
-    <header className="header">
+    <header>
       <button
         className="hamburger-menu-icon"
         onClick={() => setOpenMenu(!openMenu)}
