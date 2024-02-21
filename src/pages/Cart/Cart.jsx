@@ -2,7 +2,12 @@ import React from 'react';
 import './cart.scss';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
-import { addItemToCart } from '../../features/cartSlice/cartSlice';
+import {
+  addItemToCart,
+  removeItemFromCart,
+  incrementQuantity,
+  decrementQuantity,
+} from '../../features/cartSlice/cartSlice';
 
 import { food } from '../../foodData';
 
