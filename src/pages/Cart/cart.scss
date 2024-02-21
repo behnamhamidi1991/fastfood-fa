@@ -1,0 +1,72 @@
+.cart-page {
+  padding: 100px 10%;
+
+  .cart-header {
+    margin-bottom: 30px;
+    text-align: center;
+    h2 {
+      font-family: 'title';
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      font-family: 'fanum';
+    }
+  }
+
+  //   CONTAINER
+  .cart-container {
+    width: 100%;
+    padding: 0 20%;
+    .cart-box {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      background-color: var(--post-color);
+      margin-bottom: 25px;
+      padding: 15px;
+      box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.1);
+      .cart-left {
+        width: auto;
+        display: flex;
+        justify-content: flex-end;
+        img {
+          width: 50%;
+          height: 100%;
+        }
+      }
+      .cart-right {
+        width: 100%;
+
+        h3 {
+          font-family: 'title';
+          font-size: 23px;
+        }
+
+        .cart-item-info {
+          font-family: 'fanum';
+          .cart-item-price {
+            font-family: 'fanum';
+          }
+          .cart-item-restaurant {
+            font-family: 'fanum';
+          }
+        }
+
+        .cart-quantity {
+          button {
+            width: 25px;
+            height: 25px;
+            border: none;
+            background-color: var(--primary-color);
+            color: #fff;
+          }
+          span {
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+  }
+}

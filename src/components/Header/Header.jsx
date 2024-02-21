@@ -92,7 +92,7 @@ const Header = () => {
             alt=""
           />
         </button>
-        <Link to="/" className="header-icon-wrapper">
+        <Link to="/cart" className="header-icon-wrapper">
           <span>{cart.length}</span>
           <FaShoppingCart className="header-icon" />
         </Link>
