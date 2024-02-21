@@ -13,6 +13,8 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
+  const cart = useSelector((state) => state.cart);
+
   useEffect(() => {
     window.addEventListener('scroll', isSticky);
     return () => {
@@ -91,6 +93,7 @@ const Header = () => {
           />
         </button>
         <Link to="/" className="header-icon-wrapper">
+          <span>{cart.length}</span>
           <FaShoppingCart className="header-icon" />
         </Link>
       </div>

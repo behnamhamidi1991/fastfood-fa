@@ -1,22 +1,28 @@
 import React from 'react';
 import './topslider.scss';
 import { food } from '../../../foodData';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, FreeMode, Pagination } from 'swiper/modules';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-
 import { IoIosPricetag } from 'react-icons/io';
 import { IoRestaurant } from 'react-icons/io5';
 import { MdCategory } from 'react-icons/md';
 import AddToCart from '../../shared/AddToCart/AddToCart';
 import ReadMore from '../../shared/ReadMore/ReadMore';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { addItemToCart } from '../../../features/cartSlice/cartSlice';
 
 const TopSlider = () => {
+  const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+
+  const handleAddTocart = (item) => {
+    dispatch(addItemToCart(item));
+  };
+
   return (
     <div className="topslider-page">
       <div className="topslider-header">
@@ -76,8 +82,12 @@ const TopSlider = () => {
                 <IoRestaurant /> رستوران: {item.restaurant}
               </p>
               <div className="topslider-btn-container">
-                <AddToCart>اضافه کردن به سبد خرید</AddToCart>
-                <ReadMore>مشاهده محصول</ReadMore>
+                <div onClick={() => handleAddTocart(item)}>
+                  <AddToCart>اضافه کردن به سبد خرید</AddToCart>
+                </div>
+                <Link to="/">
+                  <ReadMore>مشاهده محصول</ReadMore>
+                </Link>
               </div>
             </div>
           </SwiperSlide>

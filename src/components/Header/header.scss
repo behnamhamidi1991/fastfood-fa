@@ -10,9 +10,6 @@ header {
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
   transition: all ease-in-out 0.1s;
   z-index: 999;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 500ms;
 
   // HAMBURGER-MENU
   .hamburger-menu-icon {
@@ -85,6 +82,23 @@ header {
       gap: 5px;
       font-weight: 900;
       color: var(--text-color);
+      position: relative;
+      span {
+        position: absolute;
+        background-color: red;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        border-radius: 50%;
+        font-weight: 900;
+        font-family: 'fanum';
+        top: -7px;
+        left: -28px;
+        color: #fff;
+      }
     }
     .header-icon-dashboard {
       display: flex;
