@@ -3,7 +3,8 @@ import './cart.scss';
 import { FaShoppingCart } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  addItemToCart,
+  selectTotal,
+  selectCart,
   removeItemFromCart,
   incrementQuantity,
   decrementQuantity,
@@ -11,6 +12,7 @@ import {
 
 const ShoppingCart = () => {
   const cart = useSelector((state) => state.cart);
+  const total = useSelector((state) => selectTotal(selectCart(state)));
   const dispatch = useDispatch();
 
   const handleRemoveItem = (id) => {
@@ -35,7 +37,7 @@ const ShoppingCart = () => {
         ) : (
           <p>{cart.length} آیتم در سبد خرید شما موجود می باشد</p>
         )}
-        <p>مبلغ قابل پرداخت: 0</p>
+        <p>مبلغ قابل پرداخت: {total} تومان</p>
       </div>
 
       <div className="cart-container">
