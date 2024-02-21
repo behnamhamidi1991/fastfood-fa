@@ -43,13 +43,10 @@ export const selectCart = (state) => state.cart;
 // Get Total Price
 export const selectTotal = (state) => {
   if (Array.isArray(state)) {
-    return (
-      state
-        .reduceRight((total, item) => total + item.price * item.quantity, 0)
-        // .toFixed(2)
-        .toString()
-        .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-    );
+    return state
+      .reduceRight((total, item) => total + item.price * item.quantity, 0)
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   } else {
     console.log('Your item is not an array!');
   }
