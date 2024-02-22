@@ -56,22 +56,22 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/" className="header-link-item">
+            <Link to="/events" className="header-link-item">
               رویدادها
             </Link>
           </li>
           <li>
-            <Link to="/" className="header-link-item">
+            <Link to="/blog" className="header-link-item">
               وبلاگ
             </Link>
           </li>
           <li>
-            <Link to="/" className="header-link-item">
+            <Link to="/about" className="header-link-item">
               درباره ما
             </Link>
           </li>
           <li>
-            <Link to="/" className="header-link-item">
+            <Link to="/contact" className="header-link-item">
               تماس با ما
             </Link>
           </li>

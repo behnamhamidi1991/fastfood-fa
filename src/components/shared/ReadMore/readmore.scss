@@ -11,4 +11,8 @@
   gap: 5px;
   font-size: 13px;
   cursor: pointer;
+  &:active {
+    background-color: black;
+    border-right: solid 3px gray;
+  }
 }

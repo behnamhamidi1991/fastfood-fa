@@ -3,9 +3,10 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AppLayout from './layout/AppLayout';
 import Homepage from './pages/Homepage/Homepage';
 import ShoppingCart from './pages/Cart/Cart';
-import Production from './pages/Production/Production';
 import SingleProduction from './pages/Production/SingleProduction/SingleProduction';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
+import BlogPage from './pages/Blog/BlogPage';
+import BlogSinglePost from './pages/Blog/BlogSinglePost/BlogSinglePost';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,14 @@ const router = createBrowserRouter([
       {
         path: '/cart',
         element: <ShoppingCart />,
+      },
+      {
+        path: '/blog',
+        element: <BlogPage />,
+      },
+      {
+        path: '/blog/:id',
+        element: <BlogSinglePost />,
       },
       {
         path: '/production/:id',
