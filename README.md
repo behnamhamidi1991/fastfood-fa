@@ -1,4 +1,4 @@
-- Blog page + blog post
+- Production Single Page Remake + Responsive
 - Story modal
 - Iranian food
 - Create route navigation for better SEO
