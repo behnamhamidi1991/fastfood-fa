@@ -61,7 +61,7 @@
       box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.1);
       .comment-box-top {
         img {
-          width: 7%;
+          width: 80px;
           border-radius: 50%;
         }
         h4 {
@@ -74,6 +74,33 @@
         p {
           line-height: 2.1;
           font-size: 14px;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 524px) {
+  .comment-page {
+    .comments-container {
+      .comment-box {
+        padding: 20px;
+
+        .comment-box-top {
+          img {
+            width: 50px;
+          }
+          h4 {
+            font-family: 'title';
+            font-size: 18px;
+          }
+        }
+        .comment-box-bottom {
+          p {
+            line-height: 1.8;
+            font-size: 13px;
+          }
         }
       }
     }
