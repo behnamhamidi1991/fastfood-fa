@@ -6,6 +6,9 @@
   color: var(--text-color);
   .singleblog-page-right {
     flex: 4;
+    background-color: var(--post-color);
+    padding: 28px 35px;
+    box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.1);
     .singleblog-content {
       h3 {
         font-family: 'title';
@@ -23,6 +26,8 @@
     flex: 1;
     background-color: var(--post-color);
     color: var(--text-color);
+    box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.1);
+
     .singleblog-sidebar-top {
       display: flex;
       flex-direction: column;
@@ -43,23 +48,55 @@
       .singleblog-sidebar-top-content {
         padding: 20px;
         p {
-          font-family: 'title';
-          margin-bottom: 3px;
+          font-family: 'fanum';
+          margin-bottom: 9px;
+          font-size: 14px;
         }
         .blog-page-about-me {
-          line-height: 1.8;
+          line-height: 2.1;
           text-align: justify;
           font-size: 14px;
           margin: 10px 0;
         }
+
+        .blog-writer-social {
+          ul {
+            display: flex;
+            gap: 14px;
+            font-size: 30px;
+            justify-content: center;
+            li {
+              cursor: pointer;
+              &:hover {
+                color: var(--primary-color);
+              }
+              &:active {
+                color: var(--secondary-color);
+              }
+            }
+          }
+        }
       }
-      .blog-writer-social {
-        ul {
-          display: flex;
-          gap: 9px;
-          font-size: 30px;
-          li {
-            cursor: pointer;
+    }
+    //
+    .singleblog-sidebar-middle {
+      padding: 0 10%;
+
+      h3 {
+        font-family: 'title';
+        font-size: 21px;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        li {
+          font-family: 'title';
+          font-size: 14px;
+          margin-bottom: 10px;
+          border-bottom: 1px solid var(--text-color);
+          padding: 3px 0;
+          .singleblog-sidebar-middle-link {
+            color: var(--text-color);
             &:hover {
               color: var(--primary-color);
             }

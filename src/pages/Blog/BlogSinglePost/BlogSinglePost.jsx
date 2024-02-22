@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { blogPost } from '../../../data';
 import './blogsingle.scss';
 import { CiInstagram } from 'react-icons/ci';
@@ -12,6 +12,7 @@ import { PiTiktokLogoThin } from 'react-icons/pi';
 const BlogSinglePost = () => {
   const { id } = useParams();
   const singlePost = blogPost.find((item) => item.id === id);
+  const filteredPosts = blogPost.filter((item) => item.id !== id);
 
   return (
     <div className="singleblog-page">
@@ -70,7 +71,21 @@ const BlogSinglePost = () => {
             </div>
           </div>
         </div>
-        <div className="singleblog-sidebar-middle"></div>
+        <div className="singleblog-sidebar-middle">
+          <h3>سایر مطالب</h3>
+          <ul>
+            {filteredPosts.map((item) => (
+              <li key={item.id}>
+                <Link
+                  to={`/blog/${item.id}`}
+                  className="singleblog-sidebar-middle-link"
+                >
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
         <div className="singleblog-sidebar-bottom"></div>
       </div>
     </div>
