@@ -1,5 +1,3 @@
-- Cart logic
-- Single production style
 - Blog page + blog post
 - Story modal
 - Iranian food
