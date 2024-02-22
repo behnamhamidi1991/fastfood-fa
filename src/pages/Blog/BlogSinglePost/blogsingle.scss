@@ -32,6 +32,10 @@
     background-color: var(--post-color);
     color: var(--text-color);
     box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 70px;
+    height: 100%;
+    padding-bottom: 70px;
 
     .singleblog-sidebar-top {
       display: flex;
