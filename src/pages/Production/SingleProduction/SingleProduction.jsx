@@ -11,6 +11,7 @@ import {
 import { IoIosPricetag } from 'react-icons/io';
 import { IoRestaurant } from 'react-icons/io5';
 import { FaShoppingCart } from 'react-icons/fa';
+import Comments from '../../../components/shared/Comments/Comments';
 
 const SingleProduction = () => {
   const { id } = useParams();
@@ -55,6 +56,7 @@ const SingleProduction = () => {
             ))}
           </div>
         </div>
+        <Comments />
       </div>
       <div className="singleProduct-left">
         <img src={singleProduction.img} alt={singleProduction.title} />
@@ -86,6 +88,28 @@ const SingleProduction = () => {
           <p>
             جمع مبلغ در سبد خرید شما: <span>{total}</span>
           </p>
+        </div>
+
+        <div className="singleProduct-left-contact-us">
+          <h4>گزارش تخلف</h4>
+          <p>
+            در صورت مشاهده هرگونه تخلف لطفاً با شماره های زیر تماس گفته یا از
+            بخش تماس با ما با مدیران وبسایت ارتباط برقرار کنید
+          </p>
+          <ul>
+            <li>98-4213-5645-032+</li>
+            <li>98-0234-2421-002+</li>
+            <li>98-2145-0023-231+</li>
+            <li>98-2564-5212-526+</li>
+            <li>98-2564-3321-213+</li>
+          </ul>
+          <ul>
+            <h5>پست الکترونیک</h5>
+            <li className="singleProduct-left-email">
+              info@sorenfoodcourt.com
+            </li>
+            <li className="singleProduct-left-email">sorenadmin@gmail.com</li>
+          </ul>
         </div>
       </div>
     </div>
