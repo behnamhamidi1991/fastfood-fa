@@ -21,6 +21,11 @@
       }
     }
 
+    .singlepost-blog-top-image {
+      display: none;
+      width: 100%;
+    }
+
     // .comments {
     //   background-color: var(--post-color);
     //   color: var(--text-color);
@@ -113,6 +118,77 @@
               color: var(--secondary-color);
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .singleblog-page {
+    padding: 100px 7%;
+
+    .singleblog-page-right {
+      .singleblog-content {
+        h3 {
+          font-family: 'title';
+          font-size: 42px;
+          margin-bottom: 18px;
+        }
+        p {
+          line-height: 2.2;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .singleblog-page {
+    padding: 100px 7%;
+
+    .singleblog-page-right {
+      .singleblog-content {
+        h3 {
+          font-family: 'title';
+          font-size: 42px;
+          margin: 10px 0;
+        }
+        p {
+          line-height: 2.2;
+          text-align: justify;
+        }
+      }
+
+      .singlepost-blog-top-image {
+        display: block;
+        width: 100%;
+      }
+    }
+    .singleblog-page-left {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 516px) {
+  .singleblog-page {
+    padding: 100px 7%;
+
+    .singleblog-page-right {
+      padding: 18px 25px;
+      .singleblog-content {
+        h3 {
+          font-family: 'title';
+          font-size: 28px;
+          margin-bottom: 18px;
+          text-align: center;
+        }
+        p {
+          line-height: 2;
+          text-align: justify;
+          font-size: 14px;
         }
       }
     }

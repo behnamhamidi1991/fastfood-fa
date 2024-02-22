@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { blogPost } from '../../../data';
 import './blogsingle.scss';
@@ -15,10 +15,20 @@ const BlogSinglePost = () => {
   const singlePost = blogPost.find((item) => item.id === id);
   const filteredPosts = blogPost.filter((item) => item.id !== id);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="singleblog-page">
       <div className="singleblog-page-right">
-        <div className="singleblog-image"></div>
+        <div className="singleblog-image">
+          <img
+            src={singlePost.blogImg}
+            alt={singlePost.title}
+            className="singlepost-blog-top-image"
+          />
+        </div>
         <div className="singleblog-content">
           <h3>{singlePost.title}</h3>
           <p>{singlePost.content}</p>

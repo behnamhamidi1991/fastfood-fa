@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { food } from '../../../foodData';
 import Sidebar from '../../../components/shared/Sidebar/Sidebar';
@@ -20,6 +20,10 @@ const SingleProduction = () => {
 
   const dispatch = useDispatch();
   const total = useSelector((state) => selectTotal(selectCart(state)));
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // ADD TO CART
   const handleAddToCart = (item) => {
