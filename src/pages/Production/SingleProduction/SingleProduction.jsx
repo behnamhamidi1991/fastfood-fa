@@ -1,16 +1,17 @@
 import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { food } from '../../../foodData';
-import Sidebar from '../../../components/shared/Sidebar/Sidebar';
 import './singleproduction.scss';
-import { blogPost } from '../../../data';
-import AddToCart from '../../../components/shared/AddToCart/AddToCart';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   addItemToCart,
   selectTotal,
   selectCart,
 } from '../../../features/cartSlice/cartSlice';
+
+import { IoIosPricetag } from 'react-icons/io';
+import { IoRestaurant } from 'react-icons/io5';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const SingleProduction = () => {
   const { id } = useParams();
@@ -33,59 +34,32 @@ const SingleProduction = () => {
   return (
     <div className="singleProduct">
       <div className="singleProduct-right">
-        <div className="singleProduct-image">
-          <img src={singleProduction.img} alt={singleProduction.title} />
-        </div>
-        <div className="singleProduct-content">
-          <h1>{singleProduction.title}</h1>
-          <p>{singleProduction.description}</p>
-        </div>
-        {/* COMMENTS */}
-        <div className="comments"></div>
-        {/* COMMENTS */}
+        <h3>{singleProduction.title}</h3>
+        <p>{singleProduction.description}</p>
       </div>
       <div className="singleProduct-left">
-        <div className="item-sidebar-info">
-          <div className="item-sidebar-info-top">
-            <h4>محصول: {singleProduction.title}</h4>
-            <p className="item-sidebar-info-restaurant">
-              رستوران: {singleProduction.restaurant}
-            </p>
-            <p className="item-sidebar-info-price">
-              قیمت: {singleProduction.price}
-            </p>
-            <Link to="/cart" className="sidebar-info-price-total">
-              سبد خرید: {total}
-            </Link>
-            <div onClick={() => handleAddToCart(singleProduction)}>
-              <AddToCart>اضافه کردن به سبد خرید</AddToCart>
-            </div>
-          </div>
+        <img src={singleProduction.img} alt={singleProduction.title} />
+        <div className="singleProduct-left-content">
+          <p className="singleProduct-left-content-price">
+            <IoIosPricetag className="singleProduct-left-content-icon" />
+            قیمت: {singleProduction.price}
+          </p>
+          <p className="singleProduct-left-content-restaurant">
+            <IoRestaurant className="singleProduct-left-content-icon" />
+            رستوران: {singleProduction.restaurant}
+          </p>
+          <button className="singleProduct-left-content-btn">
+            اضافه کردن به سبد خرید
+          </button>
         </div>
-        <div className="singleProduct-sidebar-header">
-          <ul>
-            <h3>سایر آیتم های محبوب</h3>
-            {filteredFood.map((item) => (
-              <li key={item.id}>
-                <Link className="production-sidebar-link" to="/">
-                  {item.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        <div className="singleProduct-left-cart">
+          <button>+</button>
+          <span>1</span>
+          <button>-</button>
         </div>
-        {/* Test */}
-        <div className="singleProduct-sidebar-middle">
-          <ul>
-            <h3>آخرین مطالب</h3>
-            {blogPost.map((item) => (
-              <li key={item.id}>
-                <Link className="production-sidebar-link" to="/">
-                  {item.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        <div className="singleProduct-left-total">
+          <FaShoppingCart className="singleProduct-left-cart-icon" />
+          <p>جمع مبلغ در سبد خرید شما: 0</p>
         </div>
       </div>
     </div>
