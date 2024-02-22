@@ -20,6 +20,11 @@
         text-align: justify;
       }
     }
+
+    // .comments {
+    //   background-color: var(--post-color);
+    //   color: var(--text-color);
+    // }
   }
 
   .singleblog-page-left {
@@ -93,7 +98,7 @@
           font-family: 'title';
           font-size: 14px;
           margin-bottom: 10px;
-          border-bottom: 1px solid var(--text-color);
+          border-bottom: 1px solid var(--border-color);
           padding: 3px 0;
           .singleblog-sidebar-middle-link {
             color: var(--text-color);

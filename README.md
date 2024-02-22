@@ -1,3 +1,4 @@
 - Blog page + blog post
 - Story modal
 - Iranian food
+- Create route navigation for better SEO

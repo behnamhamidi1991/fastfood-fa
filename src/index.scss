@@ -12,6 +12,8 @@ $primary-dark: #3258e0;
 $primary-light: #3298f1;
 $secondary: #ea4492;
 $green: rgb(10, 147, 152);
+$border-color-light: rgb(217, 217, 217);
+$border-color-dark: rgb(83, 81, 108);
 
 :root {
   --bg-color: #{$bg-light};
@@ -22,6 +24,7 @@ $green: rgb(10, 147, 152);
   --green-color: #{$green};
   --header-color: #{$navbar-light};
   --footer-color: #{$footer-light};
+  --border-color: #{$border-color-light};
 }
 
 .dark {
@@ -33,6 +36,7 @@ $green: rgb(10, 147, 152);
   --green-color: #{$green};
   --header-color: #{$navbar-dark};
   --footer-color: #{$footer-dark};
+  --border-color: #{$border-color-dark};
 }
 
 @font-face {

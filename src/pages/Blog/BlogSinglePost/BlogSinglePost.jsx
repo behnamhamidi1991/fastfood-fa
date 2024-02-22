@@ -8,6 +8,7 @@ import { PiYoutubeLogoThin } from 'react-icons/pi';
 import { PiWhatsappLogoThin } from 'react-icons/pi';
 import { PiFacebookLogoThin } from 'react-icons/pi';
 import { PiTiktokLogoThin } from 'react-icons/pi';
+import Comments from '../../../components/shared/Comments/Comments';
 
 const BlogSinglePost = () => {
   const { id } = useParams();
@@ -22,7 +23,9 @@ const BlogSinglePost = () => {
           <h3>{singlePost.title}</h3>
           <p>{singlePost.content}</p>
         </div>
-        <div className="comments"></div>
+        <div className="comments">
+          <Comments />
+        </div>
       </div>
       <div className="singleblog-page-left">
         <div className="singleblog-sidebar-top">
