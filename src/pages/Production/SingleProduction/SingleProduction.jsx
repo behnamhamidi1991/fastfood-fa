@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { food } from '../../../foodData';
 import './singleproduction.scss';
@@ -8,7 +8,6 @@ import {
   selectTotal,
   selectCart,
 } from '../../../features/cartSlice/cartSlice';
-
 import { IoIosPricetag } from 'react-icons/io';
 import { IoRestaurant } from 'react-icons/io5';
 import { FaShoppingCart } from 'react-icons/fa';
@@ -18,6 +17,9 @@ const SingleProduction = () => {
   const singleProduction = food.find((item) => item.id === id);
 
   const filteredFood = food.filter((item) => item.id !== id);
+  const cart = useSelector(selectCart);
+  const itemQuantity = cart.find((item) => item.id === id)?.quantity || 0;
+  const itemExist = cart.find((item) => item.id === id);
 
   const dispatch = useDispatch();
   const total = useSelector((state) => selectTotal(selectCart(state)));
@@ -36,6 +38,23 @@ const SingleProduction = () => {
       <div className="singleProduct-right">
         <h3>{singleProduction.title}</h3>
         <p>{singleProduction.description}</p>
+        <div className="singleProduct-right-other-container">
+          <div className="singleProduct-right-other-header">
+            <h3>آیتم های مشابه</h3>
+          </div>
+          <div className="singleProduct-right-other">
+            {filteredFood.map((item) => (
+              <Link
+                to={`/production/${item.id}`}
+                key={item.id}
+                className="singleProduct-right-other-box"
+              >
+                <img src={item.img} alt={item.title} />
+                <h4>{item.title}</h4>
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
       <div className="singleProduct-left">
         <img src={singleProduction.img} alt={singleProduction.title} />
@@ -48,18 +67,25 @@ const SingleProduction = () => {
             <IoRestaurant className="singleProduct-left-content-icon" />
             رستوران: {singleProduction.restaurant}
           </p>
-          <button className="singleProduct-left-content-btn">
+          <button
+            className="singleProduct-left-content-btn"
+            onClick={() => handleAddToCart(singleProduction)}
+          >
             اضافه کردن به سبد خرید
           </button>
         </div>
-        <div className="singleProduct-left-cart">
-          <button>+</button>
-          <span>1</span>
-          <button>-</button>
-        </div>
+
+        {itemExist ? (
+          <div className="singleProduct-left-cart">
+            <p>تعداد: </p>
+            <p>{itemQuantity}</p>
+          </div>
+        ) : null}
         <div className="singleProduct-left-total">
           <FaShoppingCart className="singleProduct-left-cart-icon" />
-          <p>جمع مبلغ در سبد خرید شما: 0</p>
+          <p>
+            جمع مبلغ در سبد خرید شما: <span>{total}</span>
+          </p>
         </div>
       </div>
     </div>
