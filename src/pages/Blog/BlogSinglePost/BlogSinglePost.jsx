@@ -2,6 +2,12 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { blogPost } from '../../../data';
 import './blogsingle.scss';
+import { CiInstagram } from 'react-icons/ci';
+import { PiLinkedinLogoThin } from 'react-icons/pi';
+import { PiYoutubeLogoThin } from 'react-icons/pi';
+import { PiWhatsappLogoThin } from 'react-icons/pi';
+import { PiFacebookLogoThin } from 'react-icons/pi';
+import { PiTiktokLogoThin } from 'react-icons/pi';
 
 const BlogSinglePost = () => {
   const { id } = useParams();
@@ -18,7 +24,52 @@ const BlogSinglePost = () => {
         <div className="comments"></div>
       </div>
       <div className="singleblog-page-left">
-        <div className="singleblog-sidebar-top"></div>
+        <div className="singleblog-sidebar-top">
+          <div className="singleblog-sidebar-top-image">
+            <img
+              src={singlePost.blogImg}
+              alt={singlePost.title}
+              className="singleblog-post-image"
+            />
+            <img
+              src={singlePost.authorImg}
+              alt="profile-img"
+              className="singleblog-profile"
+            />
+          </div>
+          <div className="singleblog-sidebar-top-content">
+            <p>نویسنده: {singlePost.author}</p>
+            <p>انتشار: {singlePost.date}</p>
+            <p className="blog-page-about-me">
+              درباره من: لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+              چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه
+              روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی
+              تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود.
+            </p>
+            <div className="blog-writer-social">
+              <ul>
+                <li>
+                  <CiInstagram />
+                </li>
+                <li>
+                  <PiLinkedinLogoThin />
+                </li>
+                <li>
+                  <PiYoutubeLogoThin />
+                </li>
+                <li>
+                  <PiWhatsappLogoThin />
+                </li>
+                <li>
+                  <PiFacebookLogoThin />
+                </li>
+                <li>
+                  <PiTiktokLogoThin />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div className="singleblog-sidebar-middle"></div>
         <div className="singleblog-sidebar-bottom"></div>
       </div>
